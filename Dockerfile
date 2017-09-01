@@ -9,3 +9,6 @@ WORKDIR /var/www/html/jobe/
 RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf
 RUN a2enconf fqdn
 RUN /usr/sbin/apache2ctl start && ./install
+EXPOSE 80
+EXPOSE 443
+CMD service apache2 start && tail -F /var/log/apache2/access.log
