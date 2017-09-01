@@ -1,0 +1,3 @@
+[submodule "jobe"]
+	path = jobe
+	url = https://github.com/trampgeek/jobe
